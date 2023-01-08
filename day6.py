@@ -6,11 +6,7 @@ fishes = list(map(int, fishes[0].split(',')))
 # Part 1: 380243
 # Part 2: 1708791884591
 
-def solve(forPart1 = False):
-    if forPart1:
-        days = 80
-    else:
-        days = 256
+def solve(days):
     currentState = {
         0: fishes.count(0),
         1: fishes.count(1),
@@ -41,5 +37,5 @@ def solve(forPart1 = False):
         total += currentState[fish]
     return total
 
-print("Part 1:", solve(True))
-print("Part 2:", solve())
+print("Part 1:", solve(80))
+print("Part 2:", solve(256))
