@@ -23,14 +23,18 @@ def getNumberFromWord(word, dictionary):
         hasAll = all([char in word for char in dictionary[7]])
         if hasAll:
             return 3
+        # if it intersects letter 4 at 2 places then its 2
         elif len(set(word) & set(dictionary[4])) == 2:
             return 2
         else:
             return 5
     elif len(word) == 6: #either 6 or 9
+        # 9 has all the characters of 4
+        hasAll = all([char in word for char in dictionary[4]])
+        # if only intersects with 1 at one place only
         if len(set(word) & set(dictionary[1])) == 1:
             return 6
-        elif len(set(word) & set(dictionary[4])) == 4:
+        elif hasAll:
             return 9
         else:
             return 0
