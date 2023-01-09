@@ -45,7 +45,6 @@ for signal in signals:
         curTotal = curTotal * 10 + getNumberFromWord(word, d)
         if len(word) in [2,3,4,7]:
             count += 1
-    print(curTotal)
     total += curTotal
 
 print("Part 1:", count)
