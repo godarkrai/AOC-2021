@@ -4,7 +4,7 @@ with open('day9input.txt') as f:
 flowsToMatrix = []
 
 for flow in flows:
-    curLine = [*flow]
+    curLine = [*flow] # * converts 123 into 1 2 3 and [] coverts it into [1,2,3]
     flowsToMatrix.append(list(map(int, curLine)))
 
 rows = len(flowsToMatrix)
