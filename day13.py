@@ -1,9 +1,6 @@
 points = set()
 instructions = []
-maxY = float("-inf")
-maxX = float("-inf")
-minX = float("inf")
-minY = float("inf")
+
 with open('day13input.txt') as f:
     inputs = f.read().splitlines()
     for i, input in enumerate(inputs):
