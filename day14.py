@@ -52,7 +52,8 @@ def part2(polymer):
         pairCount[polymer[i:i+2]] += 1
 
     for _ in range(40):
-        # Create a copy beacuse 
+        # Create a copy beacuse the value of pairCount keeps on changing but we would want to deal
+        # with the original values
         pairCountCopy = pairCount.copy()
         for pair, value in rules.items():
             oldCountValue = pairCountCopy[pair]
