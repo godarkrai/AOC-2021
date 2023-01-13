@@ -4,7 +4,7 @@ with open('day15input.txt') as f:
     for lines in f.read().splitlines():
         amatrix.append(list(map(int, [*lines])))
 
-#Dijkastra
+#Dijkstra
 
 from collections import deque
 import heapq
